@@ -1,0 +1,97 @@
+*{
+   box-sizing: 0;
+   margin: 0;
+   padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+#grid-container{
+   display: grid;
+   height: 100vh;
+   grid-template-columns: 1fr 2fr 1fr   ;
+   grid-template-rows: 50px 1fr; 
+}
+
+
+#navbar{
+    height: 50px;
+    text-align: center;
+    background-color: #829460;
+}
+
+#grid-container > div{
+   text-align: center; 
+}
+
+#main-title{
+  font-family: Verdana, sans-serif;
+  width: 100%;
+}
+
+/*movie list*/
+#favorite-things{ 
+    list-style: none;
+}
+#favorite-things > li{ 
+    margin: 10px;
+    font-size: large;
+}
+
+/*main div tilte */
+#main0{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.special-title{
+    font-family: Arial;
+    background-color: bisque;
+    border-radius: 10px;
+    margin: auto;
+    padding: 15px;
+    color: #EEEEEE;
+}
+
+.special-title:hover{
+   background-color: #829460;
+}
+
+#quote-of-the-day{
+    font-size: 24px;
+    background-color:blanchedalmond;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#past-races{
+    list-style: none;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     width: 100%;
+     margin: 20px auto;
+     border-radius: 10px;
+     height: 100px;
+}
+
+.green{
+    background-color: #90A17D ;
+}
+.grey{
+    background-color: #EEEEEE;
+}
