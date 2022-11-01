@@ -4,7 +4,9 @@ let quotes = [
     `Iron Man 3`,
     `Loki the serries`,
     `Thor 3`,
-    `WandaVision`
+    `WandaVision`,
+    `Ant Man`,
+    `Captain Marvel`
 ];
 //when the got loaded this code will run
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -16,8 +18,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // Part 1 main title
     document.querySelector('#main-title').textContent = 'Marvel Movies Generator';
     // Part 3 favorite list Items create a list  
-    const favoriteThings = document.querySelectorAll('#favorite-things > li')
-
     document.querySelectorAll('.special-title').forEach((item) => {
         item.style.fontSize = '2rem'
     })
@@ -25,9 +25,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     contribute.addEventListener('click', e => {
         let actorName = document.querySelector('#form-ctrl > input:nth-of-type(1)')
         let history = document.querySelector('#form-ctrl > input:nth-of-type(2)')
-        const li = document.createElement('li')
-        li.textContent = actorName.value;
-        document.querySelector('#past-races').appendChild(li)
         const blogPost = document.createElement('div')
         blogPost.classList.add('blog-post')
         const heading = document.createElement('h2')
@@ -91,10 +88,8 @@ movie.forEach(e => {
     const title = document.createElement('p');
     const img = document.createElement('img');
     img.classList = 'movie-image'
-
     title.textContent = e.title
     img.src = e.imgUrl
     li.append(img, title)
-
     favoriteThings.appendChild(li);
 })
