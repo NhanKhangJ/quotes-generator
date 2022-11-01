@@ -1,46 +1,64 @@
 *{
-   box-sizing: 0;
    margin: 0;
    padding: 0;
 }
 body{
     display: flex;
     flex-direction: column;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BNDIxNDIxOTktZGUyZC00NGNlLWIzNjYtZDlmMGMzNzc2MzVjXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_.jpg");
 }
-
-#grid-container{
-   display: grid;
-   height: 100vh;
-   grid-template-columns: 1fr 2fr 1fr   ;
-   grid-template-rows: 50px 1fr; 
+/* every h2 tag should have this color */
+h2{
+    color: #c4986b;
 }
-
-
+ul >li{
+    color: #9698be;
+}
+/*title bar */
 #navbar{
+   position: fixed;
+    width: 100%;
     height: 50px;
     text-align: center;
-    background-color: #829460;
+    /* background-color: #829460; */
+    background: rgb(0,33,36);
+    background: rgb(91,105,80);
+    background: linear-gradient(90deg, rgba(91,105,80,1) 3%, rgba(66,11,66,0.7091211484593838) 100%);
 }
-
+#main-title{
+    font-family: Verdana, sans-serif;
+    width: 100%;
+    color: #c8843b;
+  }
+/* Grid setting */
+#grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr   ;
+    grid-template-rows:  1fr 100px; 
+ }
 #grid-container > div{
    text-align: center; 
 }
-
-#main-title{
-  font-family: Verdana, sans-serif;
-  width: 100%;
+#grid-container >div:last-of-type{
+    background: linear-gradient(90deg, rgba(91,105,80,1) 3%, rgba(66,11,66,0.7091211484593838) 100%);
+    width: 100%;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 /*movie list*/
 #favorite-things{ 
     list-style: none;
 }
-#favorite-things > li{ 
-    margin: 10px;
-    font-size: large;
+/*Movie imgae setting */
+.movie-image{
+    max-width: 200px;
+    height: 280px;
+    border-radius: 10px;
 }
-
-/*main div tilte */
+/*main div content */
 #main0{
     display: flex;
     flex-direction: column;
@@ -48,57 +66,96 @@ body{
     justify-content: space-between;
     margin-top: 20px;
 }
-
+/*actor name*/
 .special-title{
     font-family: Arial;
-    background-color: bisque;
+    /* background-color: bisque; */
     border-radius: 10px;
     margin: auto;
     padding: 15px;
     color: #EEEEEE;
 }
-
 .special-title:hover{
-   background-color: #829460;
+   /* background-color: #829460; */
+   background: rgb(10,10,9);
+background: linear-gradient(90deg, rgba(10,10,9,1) 6%, rgba(120,76,120,0.7091211484593838) 82%);
 }
-
+/*Name of the movie*/
 #quote-of-the-day{
     font-size: 24px;
-    background-color:blanchedalmond;
     margin: auto;
     border-radius: 10px;
     padding: 10px;
+    color: #FD841F;
 }
-
-#past-races{
-    list-style: none;
-}
+/* the Actor div */
+.main{
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-post{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+       width: 100%;
+       margin: 20px auto;
+       border-radius: 10px;
+       height: 100px;
+  }
+  .green{
+      /* background-color: #90A17D ; */
+      background: rgb(10,10,9);
+      background: linear-gradient(90deg, rgba(10,10,9,1) 6%, rgba(120,76,120,0.7091211484593838) 82%);
+  }
+  .grey{
+      /* background-color: #EEEEEE; */
+      background: rgb(160,116,190);
+  background: linear-gradient(90deg, rgba(160,116,190,1) 12%, rgba(120,76,120,0.7091211484593838) 82%);
+  }
+/*Black Panther zone */
+#panther img{
+    max-width: 80%;
+    border-radius: 10%;
+ }
+ #panther p{
+     color: aquamarine;
+     margin: auto 20px;
+ }
+/*Form control */ 
 #form-ctrl{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
 }
-
-
-.main{
-  display: flex;
-  flex-direction: column;
+#form-ctrl input:nth-of-type(1),
+#form-ctrl input:nth-of-type(2) {
+    height: 50px;
+    margin: 0 auto;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 25px;
 }
-
-.blog-post{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-     width: 100%;
-     margin: 20px auto;
-     border-radius: 10px;
-     height: 100px;
+#form-ctrl input:nth-of-type(3){
+    color: white;
+    background: transparent;
+    margin: 0 auto;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
 }
-
-
-.green{
-    background-color: #90A17D ;
+#form-ctrl input:nth-of-type(3):hover{
+    background: rgb(10,10,9);
+    background: linear-gradient(90deg, rgba(10,10,9,1) 6%, rgba(120,76,120,0.7091211484593838) 82%);
 }
-.grey{
-    background-color: #EEEEEE;
+/*bottom zone */
+#bottom{
+    position: static;
+    max-width: 100%;
+    margin: 0 auto;
+}
+@media (max-width:768px){
+    #grid-container{
+        display: block;
+    }
 }
